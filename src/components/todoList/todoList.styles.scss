@@ -17,7 +17,7 @@
   }
 }
 
-.listContainer-dark{
+.listContainer-dark {
   background-color: #20223b;
   height: 100%;
   display: flex;
@@ -69,7 +69,7 @@
     text-overflow: clip;
   }
 }
-.itemWrapper-dark{
+.itemWrapper-dark {
   display: flex;
   width: 600px;
   padding: 10px;
@@ -107,8 +107,12 @@
     background-color: gray;
     cursor: not-allowed;
   }
-  &:hover{
+  &:hover {
     background-color: #59c259;
+  }
+  &:disabled:hover {
+    background-color: gray;
+    cursor: not-allowed;
   }
 }
 
@@ -116,7 +120,7 @@
   background-color: red;
   color: white;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: #f06363;
   }
 }
