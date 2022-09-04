@@ -1,0 +1,40 @@
+.loginFormContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e9f8;
+}
+.loginForm {
+  justify-content: center;
+  padding: 50px;
+  border-radius: 15px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: white;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.login {
+  background-color: #3935ff;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    background-color: #5e5ce4;
+    cursor: pointer;
+  }
+}
+

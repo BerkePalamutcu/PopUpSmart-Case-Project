@@ -1,0 +1,139 @@
+.listContainer {
+  background-color: #f1e9f8;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 550px;
+  width: 100vw;
+
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    position: static;
+    width: 100vw;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.listContainer-dark{
+  background-color: #20223b;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 550px;
+  width: 100vw;
+
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    position: static;
+    width: 100vw;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.listWrapper {
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    position: static;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 425) {
+    display: flex;
+    position: static;
+    justify-content: center;
+  }
+}
+
+.itemWrapper {
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-overflow: clip;
+  white-space: wrap;
+
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    width: 320px;
+    padding: 5px;
+    text-overflow: clip;
+  }
+}
+.itemWrapper-dark{
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #27365e;
+  border: 1px solid whitesmoke;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-overflow: clip;
+  white-space: wrap;
+
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    width: 320px;
+    padding: 5px;
+    text-overflow: clip;
+  }
+}
+.listItemCompleted {
+  text-decoration: line-through;
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.editBtn {
+  background-color: #399239;
+  color: white;
+  cursor: pointer;
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  &:hover{
+    background-color: #59c259;
+  }
+}
+
+.deleteBtn {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  &:hover{
+    background-color: #f06363;
+  }
+}
+.editInput {
+  resize: none;
+  width: 400px;
+  overflow: hidden;
+  @media only screen and (max-width: 1020px) {
+    width: 150px;
+  }
+}
+
+.checkImage {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
