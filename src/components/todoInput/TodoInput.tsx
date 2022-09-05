@@ -37,10 +37,10 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
 
   return (
     <div
-      className={theme === 'dark' ? 'inputContainer-dark' : 'inputContainer'}
+      className={theme === 'dark' || themeFromLS === "dark "? 'inputContainer-dark' : 'inputContainer'}
     >
       <div className="inputTodoWrapper">
-        <h1 className="header">
+        <h1  className="header">
           {name}'s todo list
           {theme === 'dark' || themeFromLS === 'dark' ? (
             <img
