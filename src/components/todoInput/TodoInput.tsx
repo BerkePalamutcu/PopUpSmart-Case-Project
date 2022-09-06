@@ -24,7 +24,7 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
     localStorage.setItem('theme', 'light');
     dispatch(setThemeToLight());
   };
-  
+
   const handleChange = (event: any) => {
     setInputValue(event.target.value);
   };
@@ -37,10 +37,14 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
 
   return (
     <div
-      className={theme === 'dark' || themeFromLS === "dark "? 'inputContainer-dark' : 'inputContainer'}
+      className={
+        theme === 'dark' || themeFromLS === 'dark'
+          ? 'inputContainer-dark'
+          : 'inputContainer'
+      }
     >
       <div className="inputTodoWrapper">
-        <h1  className="header">
+        <h1 className="header">
           {name}'s todo list
           {theme === 'dark' || themeFromLS === 'dark' ? (
             <img
@@ -65,7 +69,7 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
             type="text"
             value={inputValue}
             onChange={handleChange}
-            placeholder='To add todos enter more than 3 characters'
+            placeholder="To add todos enter more than 3 characters"
           />
           <button
             disabled={inputValue.length < 3}
