@@ -59,7 +59,15 @@ const todoListData = createSlice({
     );
     builder.addCase(fetchTodos.rejected, (state) => {
       state.pending = false;
-      state.error = 'something happened while getting data';
+      state.error = 'something happened getting the data from the server';
+    });
+    builder.addCase(postTodos.pending, (state) => {
+      state.pending = true;
+      state.error = '';
+    });
+    builder.addCase(editTodos.pending, (state) => {
+      state.pending = true;
+      state.error = '';
     });
   },
 });
