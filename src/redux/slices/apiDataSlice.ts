@@ -35,7 +35,16 @@ export const deleteTodo = createAsyncThunk(
 const todoListData = createSlice({
   name: 'getDataFromApi',
   initialState,
-  reducers: {},
+  reducers: {
+    filterCompletedTodos: (state) => {
+      state.todoData = state.todoData.filter((item: any) => item.isCompleted);
+    },
+    filterInCompletedTodos: (state) => {
+      state.todoData = state.todoData.filter(
+        (item: any) => item.isCompleted === false
+      );
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchTodos.pending, (state) => {
       state.pending = true;
@@ -55,4 +64,6 @@ const todoListData = createSlice({
   },
 });
 
+export const { filterCompletedTodos, filterInCompletedTodos } =
+  todoListData.actions;
 export default todoListData.reducer;

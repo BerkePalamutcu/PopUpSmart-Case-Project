@@ -37,6 +37,8 @@
 }
 
 .listWrapper {
+  display: flex;
+  flex-direction: column;
   @media only screen and (max-width: 1020px) {
     display: flex;
     position: static;
@@ -140,4 +142,67 @@
   height: 20px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.filterContainer {
+  display: flex;
+}
+
+.filterWrapper {
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: center;
+  background-color: white;
+  border: 1px solid;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  & > * {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    padding: 5px;
+  }
+}
+.filterWrapper-dark {
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: center;
+  background-color: #20223b;
+  border: 1px solid white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+  & > * {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (max-width: 1020px) {
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+    padding: 5px;
+  }
+}
+
+.allTodos {
+  color: #27365e;
+}
+.completedTodos {
+  color: #11af11;
+}
+.inCompletedTodos {
+  color: #f06363;
 }

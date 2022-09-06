@@ -10,8 +10,10 @@ import '../todoInput/todoInput.styles.scss';
 import moonSymbol from '../../assets/icon-moon.svg';
 import sunSymbol from '../../assets/icon-sun.svg';
 
+//COMPONENT
 const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
   const [inputValue, setInputValue] = React.useState('');
+
   const dispatch = useAppDispatch();
   const name = localStorage.getItem('userName');
 
@@ -35,6 +37,7 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
     setInputValue('');
   };
 
+  //JSX
   return (
     <div
       className={
@@ -69,7 +72,7 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
             type="text"
             value={inputValue}
             onChange={handleChange}
-            placeholder="To add todos enter more than 3 characters"
+            placeholder="To add todos enter at least 3 characters"
           />
           <button
             disabled={inputValue.length < 3}
