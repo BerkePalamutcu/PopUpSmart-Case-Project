@@ -65,6 +65,7 @@ const TodoInput: React.FC<any> = ({ theme, themeFromLS }) => {
             type="text"
             value={inputValue}
             onChange={handleChange}
+            placeholder='To add todos enter more than 3 characters'
           />
           <button
             disabled={inputValue.length < 3}
